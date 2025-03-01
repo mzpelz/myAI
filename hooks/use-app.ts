@@ -16,11 +16,13 @@ import {
   StreamedError,
   streamedErrorSchema,
 } from "@/types";
+import {getDailyTip} from "@/configuration/constants";
 
 export default function useApp() {
+  const randomInitialMessages = `${INITIAL_MESSAGE, getDailyTip()}`  
   const initialAssistantMessage: DisplayMessage = {
     role: "assistant",
-    content: INITIAL_MESSAGE,
+    content: randomInitialMessages,
     citations: [],
   };
 
