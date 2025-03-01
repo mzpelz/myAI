@@ -8,5 +8,5 @@ export const DAILY_TIPS: string[] = [
 
 export function getDailyTip() {
   const tip = DAILY_TIPS[Math.floor(Math.random() * DAILY_TIPS.length)];
-  return `💡 Daily Tip: ${tip}`;
+  return `Your MBA Tip of the Day': ${tip}`;
 }
