@@ -19,7 +19,7 @@ import {
 import {getDailyTip} from "@/configuration/constants";
 
 export default function useApp() {
-  const randomInitialMessages = `${INITIAL_MESSAGE, getDailyTip()}`  
+  const randomInitialMessages = `${INITIAL_MESSAGE getDailyTip()}`;  
   const initialAssistantMessage: DisplayMessage = {
     role: "assistant",
     content: randomInitialMessages,
