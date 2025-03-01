@@ -20,14 +20,19 @@ import {getDailyTip} from "@/configuration/constants";
 
 export default function useApp() {
   const dailyTip =  getDailyTip();
-  const randomInitialMessages = INITIAL_MESSAGE + dailyTip; 
+  const tipMessage: DisplayMessage = {
+    role: "assistant",
+    content: dailyTip,
+    citations: [],
+  };
   const initialAssistantMessage: DisplayMessage = {
     role: "assistant",
-    content: randomInitialMessages,
+    content: INITIAL_MESSAGE,
     citations: [],
   };
 
   const [messages, setMessages] = useState<DisplayMessage[]>([
+    tipMessage,
     initialAssistantMessage,
   ]);
   const [wordCount, setWordCount] = useState(0);
